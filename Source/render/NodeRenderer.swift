@@ -20,7 +20,7 @@ class CachedLayer {
     }
 }
 
-class NodeRenderer {
+public class NodeRenderer {
 
     weak var view: MacawView?
     var sceneLayer: CALayer? {
@@ -122,7 +122,7 @@ class NodeRenderer {
         freeLayer()
     }
 
-    final public func render(in context: CGContext, force: Bool, opacity: Double, coloringMode: ColoringMode = .rgb) {
+    final func render(in context: CGContext, force: Bool, opacity: Double, coloringMode: ColoringMode = .rgb) {
         context.saveGState()
         defer {
             context.restoreGState()
@@ -304,7 +304,7 @@ class NodeRenderer {
         return result
     }
 
-    public func doFindNodeAt(path: NodePath, ctx: CGContext) -> NodePath? {
+    func doFindNodeAt(path: NodePath, ctx: CGContext) -> NodePath? {
         return nil
     }
 
